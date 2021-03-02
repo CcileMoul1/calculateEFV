@@ -1,0 +1,6 @@
+-METEXT
+S P Q
+-CAT 
+V1 : S => A
+V2 : A = P
+V3 : A => Q
