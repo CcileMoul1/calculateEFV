@@ -7,7 +7,9 @@ This code has to be able to run [Metatool](http://pinguin.biologie.uni-jena.de/b
 
 ## Usage
 (see test_protocole.m to try it)
-You can calculate the EFV directly from the constraints
+
+### You can calculate the EFV directly from the constraints
+
 ```Matlab
 S = [1 -1 -1]; % Stoichiometric matrix (m rows, r columns)
 Iirrev = [1 0 1]; % Boolean vector indicating if the ith reaction is irreversible (1) or not (0)
@@ -19,7 +21,7 @@ efv = constraintsToEFV(S,Iirrev,G,h);
 **Warning** the size consistency is not tested
 ```constraintsToEFV``` calculates the EFV of the given structure (Sv = 0, vi>=0 if vi irreversible, Gv>=h ). It returns a structure : efv.vectors contains the efv and efv.bounded contains a boolean vector (1 and 0) of "is this efv bounded ?"
 
-You can store the constraints into files and calculate the efv from these files
+### You can store the constraints into files and calculate the efv from these files
 ```Matlab
 efv2 = calculateEFV('example.dat','example_constraints.dat');
 ```
