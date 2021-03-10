@@ -3,7 +3,7 @@ Matlab implementation of the calculation of Elementary Flux Vector of a network.
 Inspired by **From elementary flux modes to elementary flux vectors: Metabolic pathway analysis with arbitrary linear flux constraints** by Klamt et al, 2017 [article](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005409#sec007)
 
 ## Installation
-This code has to be able to run [Metatool](http://pinguin.biologie.uni-jena.de/bioinformatik/networks/). Add Metatool to the pathdef.m file or store it in the same folder. [(for information)](https://fr.mathworks.com/help/matlab/matlab_env/what-is-the-matlab-search-path.html)
+This code has to be able to run [Metatool](http://pinguin.biologie.uni-jena.de/bioinformatik/networks/). Store Metatool in the same folder as **calculateEFV**, add it to the Matlab path for [the session](http://fr.mathworks.com/help/matlab/ref/addpath.html) or [permanently](https://fr.mathworks.com/help/matlab/matlab_env/what-is-the-matlab-search-path.html)
 
 ## Usage
 (see test_protocole.m to try it)
