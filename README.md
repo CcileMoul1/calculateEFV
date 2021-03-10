@@ -25,5 +25,5 @@ efv = constraintsToEFV(S,Iirrev,G,h);
 ```Matlab
 efv2 = calculateEFV('example.dat','example_constraints.dat');
 ```
-```example.dat``` describe the network (stoichiometric matrix). It uses the Metatool format file.
+```example.dat``` describe the network (stoichiometric matrix). It uses the Metatool format file, described [here](http://pinguin.biologie.uni-jena.de/bioinformatik/networks/metatool/metatool5.0/ecoli_networks.html).
 ```example_constraints.dat``` contains the linear constraints (Gv >= h). The format is describe in describe_constraint.txt
