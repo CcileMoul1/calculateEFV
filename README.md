@@ -18,12 +18,13 @@ h = [-2 ; -1 ; 0]; % vector with n rows.
 % G and h explain the linear constraints  Gv >= h (v is the vector of flux)
 efv = constraintsToEFV(S,Iirrev,G,h);
 ```
-**Warning** the size consistency is not tested
+**Warning** the size consistency is not tested.
+
 ```constraintsToEFV``` calculates the EFV of the given structure (Sv = 0, vi>=0 if vi irreversible, Gv>=h ). It returns a structure : efv.vectors contains the efv and efv.bounded contains a boolean vector (1 and 0) of "is this efv bounded ?"
 
 ### From two files ```calculateEFV```
 ```Matlab
 efv2 = calculateEFV('example.dat','example_constraints.dat');
 ```
-```example.dat``` describe the network (stoichiometric matrix). It uses the Metatool format file, described [here](http://pinguin.biologie.uni-jena.de/bioinformatik/networks/metatool/metatool5.0/ecoli_networks.html).
+```example.dat``` describes the network (stoichiometric matrix). It uses the Metatool format file, described [here](http://pinguin.biologie.uni-jena.de/bioinformatik/networks/metatool/metatool5.0/ecoli_networks.html).
 ```example_constraints.dat``` contains the linear constraints (Gv >= h). The format is describe in describe_constraint.txt
