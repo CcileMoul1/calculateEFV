@@ -3,12 +3,12 @@ Matlab implementation of the calculation of Elementary Flux Vector of a network.
 Inspired by **From elementary flux modes to elementary flux vectors: Metabolic pathway analysis with arbitrary linear flux constraints** by Klamt et al, 2017 [(the article)](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005409#sec007).
 
 ## Installation
-This code has to be able to run [Metatool](http://pinguin.biologie.uni-jena.de/bioinformatik/networks/). Store Metatool in the same folder as **calculateEFV**, add it to the Matlab path for [the session](http://fr.mathworks.com/help/matlab/ref/addpath.html) or [permanently](https://fr.mathworks.com/help/matlab/matlab_env/what-is-the-matlab-search-path.html).
+This code needs [Metatool](http://pinguin.biologie.uni-jena.de/bioinformatik/networks/). Store Metatool in the same folder as **calculateEFV** or add it to the Matlab path for [the session](http://fr.mathworks.com/help/matlab/ref/addpath.html) or [permanently](https://fr.mathworks.com/help/matlab/matlab_env/what-is-the-matlab-search-path.html).
 
 ## Usage
-(see test_protocole.m to try it)
+The code bellow is in ```test_protocole.m```. It calculates the EFV of the same example (described in ```example.dat``` (metabolic network) and in ```example_constraints.dat``` (linear constraints)) in two ways. 
 
-### You can calculate the EFV directly from the constraints
+### Directly from the constraints ```constraintsToEFV```
 
 ```Matlab
 S = [1 -1 -1]; % Stoichiometric matrix (m rows, r columns)
@@ -21,7 +21,7 @@ efv = constraintsToEFV(S,Iirrev,G,h);
 **Warning** the size consistency is not tested
 ```constraintsToEFV``` calculates the EFV of the given structure (Sv = 0, vi>=0 if vi irreversible, Gv>=h ). It returns a structure : efv.vectors contains the efv and efv.bounded contains a boolean vector (1 and 0) of "is this efv bounded ?"
 
-### You can store the constraints into files and calculate the efv from these files
+### From two files ```calculateEFV```
 ```Matlab
 efv2 = calculateEFV('example.dat','example_constraints.dat');
 ```
